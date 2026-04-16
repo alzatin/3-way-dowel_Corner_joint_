@@ -241,8 +241,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.8907905460472698,
-      "y": 0.6554878048780487,
+      "x": 0.8655256723716381,
+      "y": 0.6615853658536586,
       "uniqueID": "id-903",
       "ioValues": [
         {
@@ -872,11 +872,6 @@
       "ap2ID": "id-1023"
     },
     {
-      "ap2Name": "geometry1",
-      "ap1ID": "id-618",
-      "ap2ID": "id-903"
-    },
-    {
       "ap2Name": "ShapeToFillet",
       "ap1ID": "id-618",
       "ap2ID": "id-1084"
@@ -922,6 +917,11 @@
       "ap2ID": "id-1038"
     },
     {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-1084",
+      "ap2ID": "id-903"
+    },
+    {
       "ap2Name": "geometry",
       "ap1ID": "id-1105",
       "ap2ID": "id-1111"
@@ -931,7 +931,11 @@
       "ap1ID": "id-1111",
       "ap2ID": "id-1115"
     },
-    null
+    {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-1115",
+      "ap2ID": "id-903"
+    }
   ],
   "unitsKey": "Inches",
   "fileTypeVersion": 1,
