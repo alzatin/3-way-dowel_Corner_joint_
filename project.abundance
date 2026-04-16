@@ -1021,6 +1021,36 @@
       },
       "unitsKey": "Unitless",
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Export",
+      "x": 0.8223308883455582,
+      "y": 0.8810975609756097,
+      "uniqueID": "id-1281",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "3-way-dowel_Corner_joint_",
+          "currentEquation": "3-way-dowel_Corner_joint_"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "3-way-dowel_Corner_joint_"
     }
   ],
   "allConnectors": [
@@ -1083,6 +1113,11 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-903",
       "ap2ID": "id-564"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-903",
+      "ap2ID": "id-1281"
     },
     {
       "ap2Name": "Shape 7",
