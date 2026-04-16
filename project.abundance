@@ -79,8 +79,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.35452322738386305,
-      "y": 0.35060975609756095,
+      "x": 0.35696821515892424,
+      "y": 0.36585365853658536,
       "uniqueID": "id-609",
       "ioValues": [
         {
@@ -96,8 +96,8 @@
     },
     {
       "atomType": "Fusion",
-      "x": 0.7726161369193154,
-      "y": 0.4329268292682927,
+      "x": 0.7204563977180114,
+      "y": 0.38414634146341464,
       "uniqueID": "id-618",
       "ioValues": [
         {
@@ -128,9 +128,9 @@
           }
         },
         {
-          "name": "Shape 5",
+          "name": "Shape 6",
           "ioValue": {
-            "geometry": "rotate-extrude-circle-0.75-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-0-90-0",
+            "geometry": "rotate-extrude-circle-0.75-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-90-0-0",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -155,9 +155,9 @@
           }
         },
         {
-          "name": "Shape 6",
+          "name": "Shape 7",
           "ioValue": {
-            "geometry": "rotate-extrude-circle-0.75-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-90-0-0",
+            "geometry": "rotate-extrude-circle-0.75-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-0-90-0",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -241,8 +241,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.48003259983700086,
-      "y": 0.6707317073170731,
+      "x": 0.4767726161369193,
+      "y": 0.673780487804878,
       "uniqueID": "id-878",
       "ioValues": [
         {
@@ -415,8 +415,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.8883455582722086,
-      "y": 0.7469512195121951,
+      "x": 0.8907905460472698,
+      "y": 0.6554878048780487,
       "uniqueID": "id-903",
       "ioValues": [
         {
@@ -501,135 +501,6 @@
       "y": 0.3384615384615385,
       "uniqueID": "id-924",
       "name": "Dowel_depth"
-    },
-    {
-      "atomType": "GitHubMolecule",
-      "x": 0.808475957620212,
-      "y": 0.7225609756097561,
-      "uniqueID": "id-840",
-      "name": "fillet_in_BBox",
-      "ioValues": [
-        {
-          "name": "ShapeToFillet",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "RegionShape",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "Radius",
-          "ioValue": 0.25,
-          "currentEquation": ".25"
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-835",
-          "ioValues": [
-            {
-              "name": "number or geometry",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ]
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-836",
-          "name": "ShapeToFillet",
-          "type": "geometry"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.37571312143439284,
-          "y": 0.5274390243902439,
-          "uniqueID": "id-837",
-          "ioValues": [
-            {
-              "name": "shape",
-              "ioValue": "__GEOMETRY_INPUT__"
-            },
-            {
-              "name": "radius",
-              "ioValue": 0.25
-            },
-            {
-              "name": "region",
-              "ioValue": "__GEOMETRY_INPUT__"
-            }
-          ],
-          "codeVersion": 1,
-          "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 2 },\n  { inputName: \"region\", type: \"geometry\", defaultValue: null },\n];\n\nlet assembly = library[shape];\nconsole.log(region)\nlet edgeFilter;\nif (region !== '__GEOMETRY_INPUT__') {\n  let bounds = await GetBounds(region);\n  // Fillet all edges within the bounding box (removed direction filter)\n  edgeFilter = (e) => e.inBox(bounds.min, bounds.max);\n} else {\n  // Fillet all edges on the entire shape\n  edgeFilter = (e) => true;\n}\n\nreturn await AssemblyMap(assembly, async (leaf) => {\n  let solid = leaf.geometry[0];\n  let filleted = solid.fillet(radius, edgeFilter);\n  return { ...leaf, geometry: [filleted] };\n});"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-838",
-          "name": "RegionShape",
-          "type": "geometry"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.3384615384615385,
-          "uniqueID": "id-839",
-          "name": "Radius"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "shape",
-          "ap1ID": "id-836",
-          "ap2ID": "id-837"
-        },
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-837",
-          "ap2ID": "id-835"
-        },
-        {
-          "ap2Name": "region",
-          "ap1ID": "id-838",
-          "ap2ID": "id-837"
-        },
-        {
-          "ap2Name": "radius",
-          "ap1ID": "id-839",
-          "ap2ID": "id-837"
-        }
-      ],
-      "parentRepo": {
-        "privateRepo": false,
-        "repoName": "fillet_in_BBox",
-        "dateCreated": "2026-04-16T15:20:24Z",
-        "readMe": "https://raw.githubusercontent.com/alzatin/fillet_in_BBox/master/README.md?sanitize=true",
-        "yyyy": 2026,
-        "topMoleculeID": "id-563",
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/alzatin/fillet_in_BBox",
-        "topics": [
-          "abundance-tool"
-        ],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739722",
-        "ranking": 0,
-        "searchField": "fillet_in_bbox alzatin  abundance-tool",
-        "owner": "alzatin",
-        "description": "",
-        "contentURL": "https://raw.githubusercontent.com/alzatin/fillet_in_BBox/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/alzatin/fillet_in_BBox/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "Unitless",
-      "fileTypeVersion": 1
     },
     {
       "atomType": "Molecule",
@@ -732,8 +603,8 @@
     },
     {
       "atomType": "Rotate",
-      "x": 0.4409127954360228,
-      "y": 0.3170731707317073,
+      "x": 0.4474327628361858,
+      "y": 0.35060975609756095,
       "uniqueID": "id-1023",
       "ioValues": [
         {
@@ -781,8 +652,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.6813365933170334,
-      "y": 0.23475609756097562,
+      "x": 0.6634066829665851,
+      "y": 0.17682926829268295,
       "uniqueID": "id-1038",
       "name": "fillet_in_BBox",
       "ioValues": [
@@ -796,7 +667,8 @@
         },
         {
           "name": "Radius",
-          "ioValue": 0.5
+          "ioValue": 0.5,
+          "currentEquation": ".5"
         }
       ],
       "topLevel": false,
@@ -910,7 +782,7 @@
     {
       "atomType": "Molecule",
       "x": 0.5403422982885085,
-      "y": 0.2530487804878049,
+      "y": 0.2652439024390244,
       "uniqueID": "id-1058",
       "name": "BBfillet",
       "topLevel": false,
@@ -1005,6 +877,134 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.8003259983700082,
+      "y": 0.6859756097560975,
+      "uniqueID": "id-1084",
+      "name": "fillet_in_BBox",
+      "ioValues": [
+        {
+          "name": "ShapeToFillet",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "RegionShape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Radius",
+          "ioValue": 0.5
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-1085",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-1086",
+          "name": "ShapeToFillet",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Code",
+          "x": 0.37571312143439284,
+          "y": 0.5274390243902439,
+          "uniqueID": "id-1087",
+          "ioValues": [
+            {
+              "name": "shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "radius",
+              "ioValue": 0.5
+            },
+            {
+              "name": "region",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "codeVersion": 1,
+          "code": "const Inputs = [\n  { inputName: \"shape\", type: \"geometry\", defaultValue: null },\n  { inputName: \"radius\", type: \"number\", defaultValue: 2 },\n  { inputName: \"region\", type: \"geometry\", defaultValue: null },\n];\n\nlet assembly = library[shape];\nconsole.log(region)\nlet edgeFilter;\nif (region !== '__GEOMETRY_INPUT__') {\n  let bounds = await GetBounds(region);\n  // Fillet all edges within the bounding box (removed direction filter)\n  edgeFilter = (e) => e.inBox(bounds.min, bounds.max);\n} else {\n  // Fillet all edges on the entire shape\n  edgeFilter = (e) => true;\n}\n\nreturn await AssemblyMap(assembly, async (leaf) => {\n  let solid = leaf.geometry[0];\n  let filleted = solid.fillet(radius, edgeFilter);\n  return { ...leaf, geometry: [filleted] };\n});"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.24615384615384617,
+          "uniqueID": "id-1088",
+          "name": "RegionShape",
+          "type": "geometry"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.3384615384615385,
+          "uniqueID": "id-1089",
+          "name": "Radius"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-1086",
+          "ap2ID": "id-1087"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-1087",
+          "ap2ID": "id-1085"
+        },
+        {
+          "ap2Name": "region",
+          "ap1ID": "id-1088",
+          "ap2ID": "id-1087"
+        },
+        {
+          "ap2Name": "radius",
+          "ap1ID": "id-1089",
+          "ap2ID": "id-1087"
+        }
+      ],
+      "parentRepo": {
+        "privateRepo": false,
+        "repoName": "fillet_in_BBox",
+        "dateCreated": "2026-04-16T15:20:24Z",
+        "readMe": "https://raw.githubusercontent.com/alzatin/fillet_in_BBox/master/README.md?sanitize=true",
+        "yyyy": 2026,
+        "topMoleculeID": "id-563",
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/alzatin/fillet_in_BBox",
+        "topics": [
+          "abundance-tool"
+        ],
+        "parentRepo": null,
+        "forks": 0,
+        "dateModified": "739722",
+        "ranking": 0,
+        "searchField": "fillet_in_bbox alzatin  abundance-tool",
+        "owner": "alzatin",
+        "description": "",
+        "contentURL": "https://raw.githubusercontent.com/alzatin/fillet_in_BBox/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/alzatin/fillet_in_BBox/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Unitless",
+      "fileTypeVersion": 1
     }
   ],
   "allConnectors": [
@@ -1034,9 +1034,14 @@
       "ap2ID": "id-1023"
     },
     {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-618",
+      "ap2ID": "id-903"
+    },
+    {
       "ap2Name": "ShapeToFillet",
       "ap1ID": "id-618",
-      "ap2ID": "id-840"
+      "ap2ID": "id-1084"
     },
     {
       "ap2Name": "geometry",
@@ -1099,17 +1104,12 @@
       "ap2ID": "id-913"
     },
     {
-      "ap2Name": "geometry1",
-      "ap1ID": "id-840",
-      "ap2ID": "id-903"
-    },
-    {
       "ap2Name": "RegionShape",
       "ap1ID": "id-855",
-      "ap2ID": "id-840"
+      "ap2ID": "id-1084"
     },
     {
-      "ap2Name": "Shape 5",
+      "ap2Name": "Shape 7",
       "ap1ID": "id-1023",
       "ap2ID": "id-618"
     },
