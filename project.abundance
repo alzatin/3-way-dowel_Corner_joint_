@@ -7,8 +7,8 @@
   "ioValues": [
     {
       "name": "Dowel_diam",
-      "ioValue": 1.375,
-      "currentEquation": "1 + 3/8"
+      "ioValue": 1.125,
+      "currentEquation": "1.125"
     },
     {
       "name": "section_width",
@@ -48,7 +48,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 1.5,
+          "ioValue": 1.25,
           "currentEquation": "Dowel_diam + 1/8"
         }
       ]
@@ -65,7 +65,7 @@
         },
         {
           "name": "height",
-          "ioValue": 3.375,
+          "ioValue": 3.125,
           "currentEquation": "section_width + Dowel_diam"
         }
       ]
@@ -97,13 +97,13 @@
     {
       "atomType": "Fusion",
       "x": 0.726161369193154,
-      "y": 0.2621951219512195,
+      "y": 0.36890243902439024,
       "uniqueID": "id-618",
       "ioValues": [
         {
           "name": "Shape 1",
           "ioValue": {
-            "geometry": "9e611618-{\"geometry\":\"move-extrude-circle-0.75-{\\\"origin\\\":[0,0,0],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}-3.375-0-0--0.75\",\"dimension\":\"3D\",\"tags\":[],\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"bom\":[]}-0.5-{\"geometry\":\"move-extrude-rectangle-2-2-{\\\"origin\\\":[0,0,0],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}--2-0-0-0\",\"dimension\":\"3D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}-1",
+            "geometry": "9e611618-{\"geometry\":\"move-extrude-circle-0.625-{\\\"origin\\\":[0,0,0],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}-3.125-0-0--0.625\",\"dimension\":\"3D\",\"tags\":[],\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"bom\":[]}-0.5-{\"geometry\":\"move-extrude-rectangle-2-2-{\\\"origin\\\":[0,0,0],\\\"xDir\\\":[1,0,0],\\\"normal\\\":[0,0,1]}--2-0-0-0\",\"dimension\":\"3D\",\"plane\":{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]},\"color\":\"#aad7f2\",\"tags\":[],\"bom\":[]}-1",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -130,7 +130,7 @@
         {
           "name": "Shape 6",
           "ioValue": {
-            "geometry": "rotate-extrude-circle-0.75-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-90-0-0",
+            "geometry": "rotate-extrude-circle-0.625-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-90-0-0",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -157,7 +157,7 @@
         {
           "name": "Shape 7",
           "ioValue": {
-            "geometry": "rotate-extrude-circle-0.75-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-0-90-0",
+            "geometry": "rotate-extrude-circle-0.625-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--2-0-90-0",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -233,7 +233,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 1.375,
+          "ioValue": 1.125,
           "currentEquation": "Dowel_diam"
         }
       ]
@@ -305,7 +305,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": -0.75,
+          "ioValue": -0.625,
           "currentEquation": "- (Dowel_diam + 1/8)/2"
         }
       ]
@@ -330,7 +330,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 2.625,
+          "ioValue": 2.5,
           "currentEquation": "- (Dowel_diam + 1/8)/2 + section_width + Dowel_diam"
         }
       ]
@@ -361,14 +361,14 @@
         {
           "name": "Shape 1",
           "ioValue": {
-            "geometry": "extrude-move-circle-0.6875-0-0-0-{\"origin\":[0,0,2.625],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--0.75",
+            "geometry": "extrude-move-circle-0.5625-0-0-0-{\"origin\":[0,0,2.5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}--0.75",
             "dimension": "3D",
             "tags": [],
             "plane": {
               "origin": [
                 0,
                 0,
-                2.625
+                2.5
               ],
               "xDir": [
                 1,
@@ -388,7 +388,7 @@
         {
           "name": "Shape 2",
           "ioValue": {
-            "geometry": "extrude-move-rotate-circle-0.6875-0-0-0-0-0-0-{\"origin\":[-2,0,-2.220446049250313e-16],\"xDir\":[1.1102230246251565e-16,0,-1],\"normal\":[1,0,1.1102230246251565e-16]}-0.75",
+            "geometry": "extrude-move-rotate-circle-0.5625-0-0-0-0-0-0-{\"origin\":[-2,0,-2.220446049250313e-16],\"xDir\":[1.1102230246251565e-16,0,-1],\"normal\":[1,0,1.1102230246251565e-16]}-0.75",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -415,7 +415,7 @@
         {
           "name": "Shape 3",
           "ioValue": {
-            "geometry": "extrude-move-rotate-circle-0.6875-0-0-0-0-0-0-{\"origin\":[0,2,-2.220446049250313e-16],\"xDir\":[1,0,0],\"normal\":[0,-1,1.1102230246251565e-16]}-0.75",
+            "geometry": "extrude-move-rotate-circle-0.5625-0-0-0-0-0-0-{\"origin\":[0,2,-2.220446049250313e-16],\"xDir\":[1,0,0],\"normal\":[0,-1,1.1102230246251565e-16]}-0.75",
             "dimension": "3D",
             "tags": [],
             "plane": {
@@ -575,9 +575,39 @@
       ]
     },
     {
+      "atomType": "Export",
+      "x": 0.8223308883455582,
+      "y": 0.8810975609756097,
+      "uniqueID": "id-1281",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STL",
+          "currentEquation": "STL"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "3-way-dowel_Corner_joint_",
+          "currentEquation": "3-way-dowel_Corner_joint_"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "3-way-dowel_Corner_joint_"
+    },
+    {
       "atomType": "Molecule",
-      "x": 0.6528117359413204,
-      "y": 0.4573170731707317,
+      "x": 0.6462917685411573,
+      "y": 0.5396341463414634,
       "uniqueID": "id-855",
       "name": "BBfillet",
       "topLevel": false,
@@ -596,8 +626,8 @@
         },
         {
           "atomType": "Rectangle",
-          "x": 0.5541972290138549,
-          "y": 0.5426829268292682,
+          "x": 0.48492257538712313,
+          "y": 0.5548780487804877,
           "uniqueID": "id-859",
           "ioValues": [
             {
@@ -638,15 +668,18 @@
             },
             {
               "name": "xDist",
-              "ioValue": 1
+              "ioValue": 0,
+              "currentEquation": "0"
             },
             {
               "name": "yDist",
-              "ioValue": -1
+              "ioValue": 0,
+              "currentEquation": "0"
             },
             {
               "name": "zDist",
-              "ioValue": 0
+              "ioValue": 1,
+              "currentEquation": "1"
             }
           ]
         }
@@ -896,8 +929,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.7766911165444172,
-      "y": 0.5091463414634146,
+      "x": 0.756316218418908,
+      "y": 0.5914634146341463,
       "uniqueID": "id-1084",
       "name": "fillet_in_BBox",
       "ioValues": [
@@ -911,7 +944,8 @@
         },
         {
           "name": "Radius",
-          "ioValue": 0.5
+          "ioValue": 0.25,
+          "currentEquation": "0.25"
         }
       ],
       "topLevel": false,
@@ -948,7 +982,7 @@
             },
             {
               "name": "radius",
-              "ioValue": 0.5
+              "ioValue": 0.25
             },
             {
               "name": "region",
@@ -1021,36 +1055,6 @@
       },
       "unitsKey": "Unitless",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Export",
-      "x": 0.8223308883455582,
-      "y": 0.8810975609756097,
-      "uniqueID": "id-1281",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "File Type",
-          "ioValue": "STL",
-          "currentEquation": "STL"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "3-way-dowel_Corner_joint_",
-          "currentEquation": "3-way-dowel_Corner_joint_"
-        }
-      ],
-      "type": null,
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "3-way-dowel_Corner_joint_"
     }
   ],
   "allConnectors": [
