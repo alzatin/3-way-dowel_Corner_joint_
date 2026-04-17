@@ -7,8 +7,7 @@
   "ioValues": [
     {
       "name": "Dowel_diam",
-      "ioValue": 1.125,
-      "currentEquation": "1.125"
+      "ioValue": 1.125
     },
     {
       "name": "section_width",
@@ -636,8 +635,7 @@
             },
             {
               "name": "y length",
-              "ioValue": 2,
-              "currentEquation": "2"
+              "ioValue": 2
             }
           ]
         },
