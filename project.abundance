@@ -242,8 +242,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.8508557457212713,
-      "y": 0.6219512195121951,
+      "x": 0.8524857375713122,
+      "y": 0.3871951219512195,
       "uniqueID": "id-903",
       "ioValues": [
         {
@@ -578,8 +578,8 @@
     },
     {
       "atomType": "Export",
-      "x": 0.8223308883455582,
-      "y": 0.8810975609756097,
+      "x": 0.8671556642216789,
+      "y": 0.7896341463414634,
       "uniqueID": "id-1281",
       "ioValues": [
         {
@@ -929,8 +929,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.7522412387938061,
-      "y": 0.625,
+      "x": 0.7546862265688672,
+      "y": 0.6067073170731707,
       "uniqueID": "id-1084",
       "name": "fillet_in_BBox",
       "ioValues": [
@@ -944,7 +944,8 @@
         },
         {
           "name": "Radius",
-          "ioValue": 0.25
+          "ioValue": 0.1,
+          "currentEquation": "0.1"
         }
       ],
       "topLevel": false,
@@ -981,7 +982,7 @@
             },
             {
               "name": "radius",
-              "ioValue": 0.25
+              "ioValue": 0.1
             },
             {
               "name": "region",
@@ -1088,11 +1089,6 @@
       "ap2ID": "id-1084"
     },
     {
-      "ap2Name": "geometry1",
-      "ap1ID": "id-618",
-      "ap2ID": "id-903"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-661",
       "ap2ID": "id-665"
@@ -1196,6 +1192,11 @@
       "ap2Name": "RegionShape",
       "ap1ID": "id-1058",
       "ap2ID": "id-1038"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-1084",
+      "ap2ID": "id-903"
     }
   ],
   "unitsKey": "Inches",
