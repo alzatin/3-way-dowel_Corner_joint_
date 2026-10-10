@@ -2,7 +2,7 @@
 
 # 3-way-dowel_Corner_joint_
 
-![](/project.svg)
+![](/project.png)
 
 ## Inputs
 
