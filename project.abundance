@@ -7,7 +7,8 @@
   "ioValues": [
     {
       "name": "Dowel_diam",
-      "ioValue": 1.25
+      "ioValue": 1.26,
+      "currentEquation": "1.26"
     },
     {
       "name": "section_width",
@@ -64,7 +65,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": -0.75,
+          "ioValue": -0.755,
           "currentEquation": "- (Dowel_diam + .25)/2"
         }
       ]
@@ -316,7 +317,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 2.3125,
+          "ioValue": 2.3175,
           "currentEquation": "- (Dowel_diam + 1/8)/2 + section_width + Dowel_diam"
         }
       ]
@@ -685,7 +686,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 1.5,
+          "ioValue": 1.51,
           "currentEquation": "Dowel_diam + 1/4"
         }
       ]
@@ -702,7 +703,7 @@
         },
         {
           "name": "height",
-          "ioValue": 3,
+          "ioValue": 3.01,
           "currentEquation": "section_width + Dowel_diam"
         }
       ]
@@ -898,7 +899,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 1.25,
+          "ioValue": 1.26,
           "currentEquation": "Dowel_diam"
         }
       ]
@@ -906,7 +907,7 @@
     {
       "atomType": "Difference",
       "x": 0.9,
-      "y": 0.4,
+      "y": 0.6,
       "uniqueID": "id-903",
       "ioValues": [
         {
