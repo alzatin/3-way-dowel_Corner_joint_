@@ -756,7 +756,7 @@
     {
       "atomType": "Extrude",
       "x": 0.3,
-      "y": 0.5,
+      "y": 0.4,
       "uniqueID": "id-661",
       "ioValues": [
         {
