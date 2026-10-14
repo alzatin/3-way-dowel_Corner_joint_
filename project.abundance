@@ -7,8 +7,7 @@
   "ioValues": [
     {
       "name": "Dowel_diam",
-      "ioValue": 1.26,
-      "currentEquation": "1.26"
+      "ioValue": 1.26
     },
     {
       "name": "section_width",
@@ -528,7 +527,7 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.7,
+      "x": 0.8,
       "y": 0.6,
       "uniqueID": "id-1435",
       "name": "fillet_in_BBox",
@@ -543,7 +542,8 @@
         },
         {
           "name": "Radius",
-          "ioValue": 0.1
+          "ioValue": 0.04,
+          "currentEquation": "0.04"
         }
       ],
       "topLevel": false,
@@ -581,7 +581,7 @@
             },
             {
               "name": "radius",
-              "ioValue": 0.1
+              "ioValue": 0.04
             },
             {
               "name": "region",
@@ -735,7 +735,7 @@
     },
     {
       "atomType": "Fusion",
-      "x": 0.7,
+      "x": 0.8,
       "y": 0.4,
       "uniqueID": "id-618",
       "ioValues": [
@@ -996,11 +996,6 @@
       "ap2ID": "id-1115"
     },
     {
-      "ap2Name": "retain",
-      "ap1ID": "id-1435",
-      "ap2ID": "id-903"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-574",
       "ap2ID": "id-602"
@@ -1029,6 +1024,11 @@
       "ap2Name": "ShapeToFillet",
       "ap1ID": "id-618",
       "ap2ID": "id-1435"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-618",
+      "ap2ID": "id-903"
     },
     {
       "ap2Name": "geometry",
